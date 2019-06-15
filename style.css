@@ -76,8 +76,8 @@
             background-color: rgba(255, 205, 178, 0.13);
             padding: 0 25px;
             font-family: sans-serif;
-
         }
+
         .spot {
             position: relative;
             display: inline-block;
@@ -88,17 +88,23 @@
             cursor: pointer;
             text-align: center;
         }
-        .spot:hover{
-            font-weight: bold;
-        }
-
-        .openMarker {
+        .spot:nth-child(1){
             background-color: rgba(238, 189, 161, 0.20);
             border-right: 4px solid #667d96;
         }
-
-        .marker {
-            background-color: rgba(251, 202, 172, 0.424);
+        .spot:nth-child(4),
+        .spot:nth-child(6),
+        .spot:nth-child(8),
+        .spot:nth-child(10),
+        .spot:nth-child(13),
+        .spot:nth-child(16),
+        .spot:nth-child(18)
+        {
+            background: rgba(238, 189, 161, 0.20);
+        }
+        
+        .spot:hover{
+            font-weight: bold;
         }
 
         .spotText {
