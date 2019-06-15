@@ -141,9 +141,7 @@ function getFretboard(theInstrument) {
     }
 
     setSpotsText()
-
     return fretboard
-
 
     function getString(stringNum) {
         var string = [];
@@ -166,6 +164,7 @@ function getFretboard(theInstrument) {
 
 function FretsController($scope) {
 
+    console.log($scope)
     $scope.fretboard = getFretboard(guitar)
     $scope.noteNames = noteNames
 

@@ -20,6 +20,7 @@
         label{
             cursor: pointer
         }
+        
         .wrapper{
             background: white;
             min-width: 550px; 
@@ -40,18 +41,22 @@
             font-family: Boogaloo, sans-serif;
             font-size: 2em;
         }
+
         .instrumentName{
             font-style: oblique
         }
+
         .clearButton {
             background: rgb(161, 161, 246)
         }
+
         .keys{
             display: flex;
             justify-content: space-evenly;
             margin: 15px 25px;
             font-family: sans-serif;
         }
+
         .key {
             width: 100%;
             text-align: center;
@@ -61,6 +66,7 @@
             cursor: pointer;
             margin: 0 0.8%;
         }
+
         .key:hover{
             background: white;
         }
@@ -87,10 +93,12 @@
             cursor: pointer;
             text-align: center;
         }
+
         .spot:nth-child(1){
             background-color: rgba(238, 189, 161, 0.20);
             border-right: 4px solid #667d96;
         }
+
         .spot:nth-child(4),
         .spot:nth-child(6),
         .spot:nth-child(8),
@@ -120,7 +128,6 @@
             background: rgb(192, 192, 255);
             border: solid black 1px;
         }
-
 
         @media (max-width: 660px){
             .spotText, .key{
