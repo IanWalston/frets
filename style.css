@@ -1,6 +1,7 @@
 
         * {
-            box-sizing: border-box; 
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box; 
         }
 
         html,body{
@@ -26,17 +27,24 @@
             min-width: 550px; 
             min-height: 430px;
             margin: 25px auto;
-            box-shadow: 0 0 15px black;
+            -webkit-box-shadow: 0 0 15px black;
+                    box-shadow: 0 0 15px black;
             border-radius: 15px; 
             resize: both;
             overflow: auto; 
-            user-select: none; 
+            -webkit-user-select: none; 
+               -moz-user-select: none; 
+                -ms-user-select: none; 
+                    user-select: none; 
         }
 
         .displayControls{
             background: #ccc;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
             padding: 5px;   
             font-family: Boogaloo, sans-serif;
             font-size: 2em;
@@ -51,8 +59,12 @@
         }
 
         .keys{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-evenly;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
             margin: 15px 25px;
             font-family: sans-serif;
         }
@@ -73,10 +85,13 @@
 
         .chosenKey {
             background-color: rgba(146, 178, 213, 0.37);
-            box-shadow: 0 0 25px black; 
+            -webkit-box-shadow: 0 0 25px black;
+                    box-shadow: 0 0 25px black; 
         }
 
         .string {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             background-color: rgba(255, 205, 178, 0.13);
             padding: 0 25px;
