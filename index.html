@@ -34,10 +34,8 @@
                     ng-click="keyClicked($index)">{{key.flat}}</span>
             </div>
             <div class="string" ng-repeat="string in fretboard.strings">
-                <div class="spot" ng-repeat="spot in string" ng-class="openMarker:spot.openMarker, marker:spot.marker}">
-                    <div ng-show="spot.played" class="played">
-
-                    </div>
+                <div class="spot" ng-repeat="spot in string">
+                    <div ng-show="spot.played" class="played"></div>
                     <div class="spotText" ng-click="spotClicked(spot)">
                         {{spot.text}}
                     </div>

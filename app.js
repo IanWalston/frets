@@ -91,12 +91,6 @@ function getFretboard(theInstrument) {
         for (var j = 0; j < stringLength; j++) {
             var spot = {}
             spot.absolute = (fretboard.instrument.openStrings[i] + j) % 12
-            if (j == 0) {
-                spot.openMarker = true
-            }
-            else if ([5, 7, 9, 12].indexOf(j) !== -1) {
-                spot.marker = true
-            }
             string.push(spot)
         }
         fretboard.strings.push(string)
@@ -157,13 +151,6 @@ function getFretboard(theInstrument) {
         for (var i = 0; i < stringLength; i++) {
             var spotNoteName = fretboard.flats ? noteNames[ptr].flat : noteNames[ptr].sharp
             var spot = { note: spotNoteName, text: spotNoteName, played: false }
-
-            if (i == 0) {
-                spot.openMarker = true
-            }
-            else if ([5, 7, 9, 12].indexOf(i) > -1) {
-                spot.marker = true
-            }
             string.push(spot)
             ptr++
             if (ptr > 11) {
