@@ -1,0 +1,124 @@
+
+        * {
+            box-sizing: border-box; 
+        }
+
+        html,body{
+            background: #aaa
+        }
+
+        h1{
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+            background: #ccc;
+            font-family: Boogaloo, sans-serif;
+            font-size: 3em;
+            letter-spacing: 10px;
+        }
+
+        label{
+            cursor: pointer
+        }
+        .wrapper{
+            background: white;
+            min-width: 550px; 
+            min-height: 430px;
+            margin: 25px auto;
+            box-shadow: 0 0 15px black;
+            border-radius: 15px; 
+            resize: both;
+            overflow: auto; 
+            user-select: none; 
+        }
+
+        .displayControls{
+            background: #ccc;
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;   
+            font-family: Boogaloo, sans-serif;
+            font-size: 2em;
+        }
+        .instrumentName{
+            font-style: oblique
+        }
+        .clearButton {
+            background: rgb(161, 161, 246)
+        }
+        .keys{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 15px 25px;
+            font-family: sans-serif;
+
+        }
+        .key {
+            width: 100%;
+            text-align: center;
+            border-radius:7px;
+            padding: 5px;
+            background: #fab;
+            cursor: pointer;
+            margin: 0 0.8%;
+        }
+        .key:hover{
+            background: white;
+        }
+
+        .chosenKey {
+            background-color: rgba(146, 178, 213, 0.37);
+            box-shadow: 0 0 25px black; 
+        }
+
+        .string {
+            display: flex;
+            background-color: rgba(255, 205, 178, 0.13);
+            padding: 0 25px;
+            font-family: sans-serif;
+
+        }
+        .spot {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            min-width: 27px; 
+            height: 32px;
+            border: 1px solid #92b2d5;
+            cursor: pointer;
+            text-align: center;
+        }
+        .spot:hover{
+            font-weight: bold;
+        }
+
+        .openMarker {
+            background-color: rgba(238, 189, 161, 0.20);
+            border-right: 4px solid #667d96;
+        }
+
+        .marker {
+            background-color: rgba(251, 202, 172, 0.424);
+        }
+
+        .spotText {
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+        }
+
+        .played {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(192, 192, 255);
+            border: solid black 1px;
+        }
+
+
+        @media (max-width: 660px){
+            .spotText, .key{
+                padding: 0;
+            }
+        }

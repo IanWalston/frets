@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en' ng-app>
+
+<head>
+    <title>Frets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.5 ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Visualize scales and chords on a guitar fretboard for a given key">
+    <meta name="keywords" content="guitar,frets,chords,scales,intervals,fretboard">
+    <meta name="author" content="rjt-ikw">
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
+
+    <!-- dependencies -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class='wrapper' ng-controller="FretsController">
+        <h1>FRETS</h1>
+        <div class="fretBoard">
+            <div class='displayControls'>
+                <div class='instrumentName'> {{fretboard.instrument.name}}</div>
+                <label> show intervals <input type="radio" value="true" ng-checked="fretboard.showIntervals"
+                        ng-click="showRadioClicked('intervals')" /></label>
+                <label>show note names <input type="radio" value="false" ng-checked="!fretboard.showIntervals"
+                        ng-click="showRadioClicked('notes')" /></label>
+                <button class="clearButton" ng-click="fretboard.clearPlayed()">clear</button>
+            </div>
+            <div class='keys'>
+                <span ng-class="getKeyClass($index)" ng-repeat="key in noteNames"
+                    ng-click="keyClicked($index)">{{key.flat}}</span>
+            </div>
+            <div class="string" ng-repeat="string in fretboard.strings">
+                <div class="spot" ng-repeat="spot in string" ng-class="openMarker:spot.openMarker, marker:spot.marker}">
+                    <div ng-show="spot.played" class="played">
+
+                    </div>
+                    <div class="spotText" ng-click="spotClicked(spot)">
+                        {{spot.text}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
